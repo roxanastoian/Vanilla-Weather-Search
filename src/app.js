@@ -42,9 +42,22 @@ function displayTemperature(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
   iconElement.setAttribute("alt", response.data.condition.description);
+  console.log(response.data);
 }
 
-let apiKey = "3oea045cbe469e9b0ab92f89ceefbdt4";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Oslo&key=${apiKey}`;
+function search(city) {
+  let apiKey = "3oea045cbe469e9b0ab92f89ceefbdt4";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("London");
