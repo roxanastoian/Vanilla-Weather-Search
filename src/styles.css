@@ -55,3 +55,12 @@ a {
   margin: 20px 10px 10px 30px;
   width: 100px;
 }
+
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
