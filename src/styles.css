@@ -8,13 +8,14 @@ h1 {
   color: #464a4e;
   font-size: 40px;
   font-weight: 400;
-  margin-left: 8px;
+  margin-left: 29px;
   margin-bottom: 0;
 }
 
 ul {
   list-style: none;
   padding-left: 10px;
+  margin-left: 20px;
   color: #70757a;
 }
 
@@ -32,12 +33,13 @@ a {
 }
 .weather-app {
   margin-top: 35px;
+  padding-bottom: 13px;
   border: 2px solid #edeef0;
   border-radius: 8px;
 }
 .weather-temperature img {
   margin-right: 5px;
-  margin-left: 5px;
+  margin-left: 18px;
   height: 64px;
   max-width: 150%;
 }
@@ -63,6 +65,14 @@ a {
 
 .weather-temperature .active:hover {
   text-decoration: none;
+}
+
+hr {
+  height: 3px;
+  border: none;
+  background-color: #edeef0;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 .weather-forecast {
